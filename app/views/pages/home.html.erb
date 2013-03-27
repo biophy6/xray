@@ -1,9 +1,16 @@
-<div class="hero-unit">
+<% if user_signed_in? %>
+   <div class="hero-unit">
+	<h1>You're logged in</h1>
+</div> 
+<% else %>
+  <div class="hero-unit">
 	<h1>Welcome to my x-rays site</h1>
 	<p>
 	  You've found the home page for the x-ray thing in ruby on rails!
 	</p>
 	<p>
-	  <%= link_to "Learn More", about_path, class: "btn btn-primary btn-large pull-right" %>
+	  <%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-primary btn-large pull-right" %>
 	</p>
-</div>
+</div>  
+<% end %>
+
