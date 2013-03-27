@@ -1,4 +1,5 @@
 <tr>
+	<td><%= image_tag film.image (:medium) %></td>
     <td><%= film.description %></td>
     <td><%= link_to 'Show', film %></td>
 	<% if current_user == film.user %>
