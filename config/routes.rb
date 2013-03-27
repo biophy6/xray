@@ -1,5 +1,8 @@
 Xray::Application.routes.draw do
 
+  resources :films
+
+
   devise_for :users
 
   root :to => 'pages#home'
