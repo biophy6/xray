@@ -67,4 +67,15 @@ Xray::Application.configure do
   
   # In production, :host should be set to the actual host of your application.
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  # This is for uploading paperclip files onto Amazon S3 instead of heroku
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => "xraything",
+      :access_key_id => "AKIAIZEES4G4ENZQOXAQ",
+      :secret_access_key => "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"
+      }
+    }
+  
 end
