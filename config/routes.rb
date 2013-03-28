@@ -5,7 +5,7 @@ Xray::Application.routes.draw do
 
   devise_for :users
 
-  root :to => 'pages#home'
+  root :to => 'films#index'
   get 'about' => 'pages#about'
 
 
