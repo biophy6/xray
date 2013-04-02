@@ -1,9 +1,11 @@
 Xray::Application.routes.draw do
 
+  get "user/show"
+
   resources :films
 
-
   devise_for :users
+  match 'users/:id' => 'users#show', as: :user
 
   root :to => 'films#index'
   get 'about' => 'pages#about'
