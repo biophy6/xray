@@ -1,5 +1,8 @@
 <%= render 'pages/home' %>
+
 <div id="films">
-	<%= render @films %>
+  <%= render @films %>
 </div>
+
+<%= will_paginate @films %>
 
